@@ -19,4 +19,11 @@ export const Container = styled.div`
   background: #fff;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
 `;

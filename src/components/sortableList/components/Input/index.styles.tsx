@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-  width: 224px;
+  max-width: 224px;
   position: relative;
   margin-bottom: 10px;
 `;
 
 export const InputBox = styled.div`
   input {
+    max-width: 224px;
     padding: 12px;
     font-size: 16px;
     border-radius: 8px;

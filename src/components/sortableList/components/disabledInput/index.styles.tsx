@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DisabledContainer = styled.input`
-  width: 224px;
+  max-width: 224px;
   padding: 12px;
   margin-bottom: 10px;
   font-size: 16px;
