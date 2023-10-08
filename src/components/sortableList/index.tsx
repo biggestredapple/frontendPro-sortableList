@@ -76,6 +76,7 @@ export const SortableList: React.FC = () => {
                           >
                             <SelectedSkill
                               value={skill}
+                              order={key+1}
                               handleDeleteSkill={handleDeleteSkill}
                             ></SelectedSkill>
                           </div>
@@ -89,11 +90,11 @@ export const SortableList: React.FC = () => {
             </DragDropContext>
           )}
           {skills.length < 5 && (
-            <Input defaultSkillList={total} handleAddSkill={handleAddSkill} />
+            <Input defaultSkillList={total} order={skills.length + 1} handleAddSkill={handleAddSkill} />
           )}
 
           {leftItems > 0 &&
-            [...Array(leftItems)].map((_, key) => <DisabledInput key={key} />)}
+            [...Array(leftItems)].map((_, key) => <DisabledInput key={key} order={6 - leftItems + key} />)}
         </ListContainer>
         <Suggested skills={total} handleAdd={handleAddSkill} />
       </Container>

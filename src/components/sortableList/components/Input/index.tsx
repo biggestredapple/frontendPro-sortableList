@@ -12,11 +12,12 @@ import {
 
 interface InputProps {
   defaultSkillList: string[];
+  order: number;
   handleAddSkill: (value: string) => void;
 }
 
 export const Input: React.FC<InputProps> = (props) => {
-  const { defaultSkillList, handleAddSkill } = props;
+  const { defaultSkillList, order, handleAddSkill } = props;
 
   const [value, setValue] = useState<string>("");
   const filteredSkillList = defaultSkillList
@@ -58,7 +59,7 @@ export const Input: React.FC<InputProps> = (props) => {
   return (
     <InputContainer ref={containerRef}>
       <InputBox>
-        <input value={value} onChange={handleChange} onFocus={handleFocus} placeholder="Add Skill" />
+        <input value={value} onChange={handleChange} onFocus={handleFocus} placeholder={`${order} Add Skill`} />
         <ArrowIcon>
           <ArrowDown />
         </ArrowIcon>
