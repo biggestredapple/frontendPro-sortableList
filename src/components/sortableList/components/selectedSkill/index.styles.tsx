@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SelectedSkillContainer = styled.div`
-  max-width: 224px;
+  width: 224px;
   position: relative;
   padding: 12px;
   margin-bottom: 10px; 
